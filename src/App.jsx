@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import NewGame from "./pages/NewGame";
 import Character from "./pages/Character";
 import EndGame from "./pages/EndGame";

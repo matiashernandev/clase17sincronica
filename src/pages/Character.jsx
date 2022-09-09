@@ -12,7 +12,7 @@ function Character() {
             <img
                 className={styles.img}
                 src={genero === "hombre" ? hombre : mujer}
-                alt={`${genero}`}
+                alt={`Esto no está optimizado`}
             />
             <h3>¿Clase de tu personaje?</h3>
             <div className="buttons">

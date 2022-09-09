@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import styles from "../styles/EndGame.module.css";
+import CanvasConfetti from "canvas-confetti/src/confetti";
 
 /* --------------------------------- images --------------------------------- */
 import mageM from "../assets/images/mageM.webp";
@@ -30,12 +31,32 @@ function EndGame() {
         navigate(-1);
     };
 
+    const handleFocus = () => {
+        CanvasConfetti();
+    };
+
     return (
         <div>
             <h1>VAMO!</h1>
-            <img width="100px" src={img[aux]} alt={`${clase}`} />
+            <img
+                width="100px"
+                src={img[aux]}
+                alt={"Esto tampoco no está optimizado"}
+            />
             <h3>{`Tu personaje es ${genero} y su clase es ${clase}.`}</h3>
             <button onClick={handleClick}>Atras</button>
+            <a
+                href={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}
+                target="_blank"
+                rel="noreferrer"
+            >
+                <button
+                    className={styles.bottonJugar}
+                    onMouseOver={handleFocus}
+                >
+                    Comienza a jugar!
+                </button>
+            </a>
 
             <button
                 className={styles.botton}
