@@ -6,17 +6,17 @@ import EndGame from "./pages/EndGame";
 
 function App() {
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-            }}
-        >
+        <div>
             <Routes>
-                <Route path="/" element={<NewGame />} />
-                <Route path="/character/:genero" element={<Character />} />
-                <Route path="/character/:genero/:clase" element={<EndGame />} />
+                <Route path="/clase17sincronica" element={<NewGame />} />
+                <Route
+                    path="/clase17sincronica/character/:genero"
+                    element={<Character />}
+                />
+                <Route
+                    path="/clase17sincronica/character/:genero/:clase"
+                    element={<EndGame />}
+                />
             </Routes>
         </div>
     );

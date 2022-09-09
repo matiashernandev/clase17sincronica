@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import styles from "../styles/EndGame.module.css";
 
 /* --------------------------------- images --------------------------------- */
 import mageM from "../assets/images/mageM.webp";
@@ -30,26 +31,15 @@ function EndGame() {
     };
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-            }}
-        >
+        <div>
             <h1>VAMO!</h1>
             <img width="100px" src={img[aux]} alt={`${clase}`} />
             <h3>{`Tu personaje es ${genero} y su clase es ${clase}.`}</h3>
             <button onClick={handleClick}>Atras</button>
 
             <button
-                style={{
-                    background: "red",
-                    position: "absolute",
-                    bottom: "50px",
-                    left: "50px",
-                }}
-                onClick={() => navigate("/")}
+                className={styles.botton}
+                onClick={() => navigate("/clase17sincronica")}
             >
                 Volver al inicio
             </button>
