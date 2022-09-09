@@ -31,7 +31,7 @@ function EndGame() {
         navigate(-1);
     };
 
-    const handleFocus = () => {
+    const handleOnMouseOver = () => {
         CanvasConfetti();
     };
 
@@ -52,7 +52,7 @@ function EndGame() {
             >
                 <button
                     className={styles.bottonJugar}
-                    onMouseOver={handleFocus}
+                    onMouseOver={handleOnMouseOver}
                 >
                     Comienza a jugar!
                 </button>
